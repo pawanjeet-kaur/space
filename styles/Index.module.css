@@ -1,0 +1,56 @@
+@media (max-width: 480px) {
+    .container {
+      background-image: url("../public/home/background-home-mobile.jpg");
+      background-size: cover;
+    }
+    .content {
+      padding: 5%;
+      text-align: center;
+    }
+  }
+
+  
+  @media (min-width: 481px) and (max-width: 1024px) {
+    .container {
+      background-image: url("../public/home/background-home-tablet.jpg");
+      background-size: cover;
+    }
+    .content {
+      padding: 5%;
+      text-align: center;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .container {
+      background-image: url("../public/home/background-home-desktop.jpg");
+      background-size: cover;
+      height: 100vh;
+    }
+    .content {
+      padding: 7em;
+      max-width: 40em;
+      float: left;
+    }
+  }
+
+.wrapper {
+  display: inline-block;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.exploreBtn {
+  width: 10em;
+  line-height: 10em;
+  text-align: center;
+  display: inline-block;
+  padding: 0;
+  background-color: white;
+  border-radius: 50%;   
+  text-decoration: none;
+  font-family: "Bellefair", serif;
+  font-size: 32px;
+  text-transform: uppercase;
+}

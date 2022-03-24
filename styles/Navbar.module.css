@@ -1,0 +1,93 @@
+.navcontainer {
+    height: 100px;
+}
+
+.nav {
+    position:relative;
+    height: 90px;
+    background: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    padding: 7rem;
+}
+
+.nav ul {
+    background: hsl( var(--clr-white) / 0.1);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.mobileNavToggle {
+    display: none;
+}
+
+@media (max-width: 45rem){
+    .nav ul {
+        background: hsl( var(--clr-white) / 0.1);
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 20%;
+        list-style: none;
+        padding: min(20rem, 10vh) 2rem;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .mobileNavToggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        right: 1rem;
+        top: 2rem;
+        background: transparent;
+        background-image: url("../public/shared/icon-hamburger.svg");
+        width: 1.5rem;
+        aspect-ratio: 1;
+        border: 0;
+    }
+}
+
+@supports (backdrop-filter: blur(1.5rem)){
+    .nav ul {
+        background: hsl( var(--clr-white) / 0.1);
+        backdrop-filter: blur(1.5rem)
+    }
+}
+
+.nav ul li a {
+    margin: 30px;
+    padding-top: 20px;
+    padding-bottom: 12px;
+    text-transform: uppercase;
+    font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+}
+
+.nav ul li a:active {
+    border-bottom: 3px white solid;
+}
+
+.nav ul li a:hover {
+    border-bottom: 3px #a39f9f solid;
+}
+
+.srOnly {
+    position: absolute; 
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px; 
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+  }
